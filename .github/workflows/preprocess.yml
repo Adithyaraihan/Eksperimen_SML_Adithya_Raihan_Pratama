@@ -10,7 +10,7 @@ on:
       - 'preprocessing/automate_Adithya.py'
 
 jobs:
-  preprocess:
+  preprocess:git 
     runs-on: ubuntu-latest
 
     steps:
