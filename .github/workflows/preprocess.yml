@@ -8,6 +8,8 @@ on:
     paths:
       - 'namadataset_raw/**'
       - 'preprocessing/automate_Adithya_Raihan_Pratama.py'
+      - '.github/workflows/**'
+  workflow_dispatch:
 
 jobs:
   preprocess:
