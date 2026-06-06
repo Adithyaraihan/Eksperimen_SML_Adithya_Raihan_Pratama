@@ -7,10 +7,10 @@ on:
       - master
     paths:
       - 'namadataset_raw/**'
-      - 'preprocessing/automate_Adithya.py'
+      - 'preprocessing/automate_Adithya_Raihan_Pratama.py'
 
 jobs:
-  preprocess:git 
+  preprocess:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,10 +30,10 @@ jobs:
 
     - name: Run Preprocessing Automation Script
       run: |
-        python preprocessing/automate_Adithya.py
+        python preprocessing/automate_Adithya_Raihan_Pratama.py
 
     - name: Commit and Push Clean Dataset & Artifacts
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: "automated: update preprocessed dataset and scaling artifacts [skip ci]"
-        file_pattern: 'preprocessing/*'
+        file_pattern: 'preprocessing/**'
